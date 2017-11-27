@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Principal</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+    
+    <script language="javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/index.js"></script>
+    
+
+</head>
+<body>
+
+<header>
+
+
+    <div class="encabezado">
+        <div class= "titulo">
+            CELULARES
+        </div>
+
+       <div class="logo">
+            <a title="" href="../index.html"><img class="imgCabecera" src="../img/logo.png" alt="" /></a>
+       </div>
+
+       <div class= "cuenta">
+            <a href="cuenta.html" ><img class="imgCuenta" src="../img/user5.png" alt="" /></a>
+       </div>
+
+        <div class="espaciado">
+           <h3>Tu mejor opción para compras online</h3>
+        </div>
+
+
+      </div>
+</header>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-2 col-sm-3 col-12 borde">
+          
+          <div id="menu">
+                <ul>
+                         <li class="nivel1"><a href="producto.html" >Productos</a></li>
+
+
+
+                         <li class="nivel1"><a href="informatica.html" >Informatica</a></li>
+
+
+
+                         <li class="nivel1"><a href="electro.html" >Electrodomesticos</a></li>
+
+
+
+                         <li  class="nivel1"><a href="celular.html" >Celulares</a></li>
+
+
+
+                </ul>
+              </div>
+
+          </div>
+
+
+   <div class="col-lg-10 col-sm-9 col-12 borde">
+   
+    <div class="producto">
+    <table class="tabla-contenido" border= 2px solid valign= "top" >
+    
+    <tr class="fila" >
+                       <td width="400px">
+                        <img class="img-contenido" src="../img/cel/3.jpg">
+                            <p class="p" >
+                              <li class="link">
+                                   <a onclick="eviar(3, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Sony Xperia Z4
+                                  </a>
+
+                              </li>
+                       </td>
+
+
+                       <td width="400px">
+                         <img class="img-contenido" src="../img/cel/1.jpg">
+                         <p class="p" >
+                       <li class="link">
+                                   <a onclick="eviar(1, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Iphone 6
+                                  </a>
+
+                              </li>
+                       </td>
+
+
+                       <td width="400px">
+                         <img class="img-contenido" src="../img/cel/5.jpg">
+                         <p class="p" >
+                      <li class="link">
+                                   <a onclick="eviar(5, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Huawei P8
+                                  </a>
+
+                              </li>
+                       </td>
+
+
+                   </tr>
+
+
+                    <tr class="fila" >
+                        <td width="400px">
+                         <img class="img-contenido" src="../img/cel/2.jpg">
+                         <p class="p" >
+                      <li class="link">
+                                   <a onclick="eviar(2, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Samsung Galaxy A7
+                                  </a>
+
+                              </li>
+                       </td>
+
+                        <td width="400px">
+                         <img class="img-contenido" src="../img/cel/6.jpg">
+                         <p class="p" >
+                       <li class="link">
+                                   <a onclick="eviar(6, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Moto G4
+                                  </a>
+
+                              </li>
+                       </td>
+
+                        <td width="400px">
+                         <img class="img-contenido" src="../img/cel/7.jpg">
+                         <p class="p" >
+                       <li class="link">
+                                  <a onclick="eviar(7, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Iphone 5s
+                                  </a>
+
+                              </li>
+                       </td>
+
+
+                   </tr>
+
+                      <tr class="fila">
+                        <td width="400px">
+                         <img class="img-contenido" src="../img/cel/8.jpg">
+                         <p class="p" >
+                      <li class="link">
+                                  <a onclick="eviar(8, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Samsung Galaxy S7 EDGE
+                                  </a>
+
+                              </li>
+                       </td>
+
+                       <td width="400px">
+                         <img class="img-contenido" src="../img/cel/9.jpg">
+                         <p class="p" >
+                       <li class="link">
+                                   <a onclick="eviar(9, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Sony Xperia Z5
+                                  </a>
+
+                              </li>
+                       </td>
+
+                       <td width="400px">
+                         <img class="img-contenido" src="../img/cel/4.jpg">
+                         <p class="p" >
+                     <li class="link">
+                                   <a onclick="eviar(4, 2);" href="detalle.html"  style="text-decoration:none" >
+                                  Samsung Galaxy S7
+                                  </a>
+
+                              </li>
+                       </td>
+
+                    </tr>
+
+
+                   </table>
+
+          </div>
+
+        </div>
+    </div>
+ </div>   
+
+
+    <script language="javascript">
+
+
+            function eviar (id, tip) {
+                 async: true;
+                var clave;
+				clave = localStorage.setItem("clave", id);
+                 var tipo;
+				tipo = localStorage.setItem("tipo", tip);
+
+
+                    }
+
+
+        </script>
+
+
+</body>
+<footer class="footer">
+       Marcos Acosta
+
+       <br>
+       Rodrigo González
+       <br>
+
+       Universidad Nacional de Canindeyú
+       <br>
+</footer>
+</html>

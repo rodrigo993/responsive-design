@@ -1,0 +1,80 @@
+{
+    "arrayInformatica":[{
+            
+            "img": "0.jpg",
+            "marca": "Apple",
+            "detalle": "Iphone 6 con 64gb de memoria interna",
+            "disponibilidad": "En Stock",
+            "precio": 2000000
+            
+        },
+		{
+            
+            "img": "1.jpg",
+            "marca": "Kingstom",
+            "detalle": "SSD 240 gb Kingstom",
+            "disponibilidad": "En Stock",
+            "precio": 88
+            
+        },
+        {
+            
+            "img": "2.jpg",
+           "marca":"Seagate",
+            "detalle":"Disco Duro Seagate 1tb 7200rpm",
+            "disponibilidad":"En Stock",
+            "precio": 42
+            
+        },
+        {
+            "img": "3.jpg", 
+            "marca":"Intel",
+            "detalle":"Intel Core i7-4790 3.6Ghz 1150",
+            "disponibilidad":"En Stock",
+            "precio": 295
+        },
+        {
+            "img": "4.jpg",
+            "marca":"HP",
+            "detalle":"Impresora HP Multifuncion con gran calidad en copias",
+            "disponibilidad":"En Stock",
+            "precio": 20000
+        },
+        {
+            "img": "5.jpg",
+            "marca":"Kingstom",
+            "detalle":"Memoria Kingston HyperX Fury DDR3 4gb 1600Mhz",
+            "disponibilidad":"En Stock",
+            "precio": 32
+        },
+        {
+            "img": "6.jpg",
+            "marca":"AMD",
+            "detalle":"AMD FX Series FX-8350 4.0Ghz 8X Black Edition",
+            "disponibilidad":"En Stock",
+            "precio": 160
+        },
+        {
+           "img": "7.jpg",
+            "marca":"Kingston",
+            "detalle":"Memoria RAM 4gb 1600Mhz para notebook",
+            "disponibilidad":"En Stock",
+            "precio": 30
+        },
+     
+        {
+            "img": "8.jpg",
+            "marca":"Asus",
+            "detalle":"Notebook Asus UX310UA-GL310T i5/ 8GB/ 256SSD/ 13.3''",
+            "disponibilidad":"En Stock",
+            "precio": 950
+        },
+        {
+            "img": "9.jpg",
+            "marca":"HP",
+            "detalle":"Notebook HP 500gb y 8gb RAM",
+            "disponibilidad":"En Stock",
+            "precio": 20000
+        }
+    ]
+}

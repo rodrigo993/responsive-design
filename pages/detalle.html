@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Principal</title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../js/index.js"></script>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script language="javascript" src="../js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body onload="leer();">
+
+  <header>
+
+
+      <div class="encabezado">
+          <div class= "titulo">
+              DETALLES
+         </div>
+
+       <div class="logo">
+            <a title="" href="../index.html"><img class="imgCabecera" src="../img/logo.png" alt="" /></a>
+       </div>
+
+
+       <div class= "cuenta">
+            <a href="cuenta.html" ><img class="imgCuenta" src="../img/user5.png" alt="" /></a>
+       </div>
+
+
+        <div class="blank">
+
+        <a id="detalle2"></a>
+
+        </div>
+
+
+      </div>
+</header>
+
+
+ <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-sm-3 col-12 borde">
+                <div id="menu">
+                  <ul>
+                   <li class="nivel1"><a href="producto.html" >Productos</a></li>
+
+
+
+                   <li class="nivel1"><a href="informatica.html" >Informatica</a></li>
+
+
+
+                   <li class="nivel1"><a href="electro.html" >Electrodomesticos</a></li>
+
+
+
+                   <li  class="nivel1"><a href="celular.html" >Celulares</a></li>
+
+              
+
+                </ul>
+            </div>
+
+      </div>
+
+
+<div class="col-lg-10 col-sm-9 col-12 borde">
+     
+      <div class="producto">
+          <table class="tabla-contenido" border= 2px solid valign= "top" >
+              <tr class="fila" >
+
+                       <td width="40%">
+                           <img class="img-contenido-detalle" src="" id="imagen">
+                       </td>
+
+
+                       <td width="60%">
+
+
+                        <p class="detalle-marca">  MARCA
+                        <br>
+                        <a id="marca"></a>
+
+                        </p>
+
+                        <p class="detalle-detalle">  DETALLE
+                        <br>
+                        <a id="detalle"></a>
+
+                        </p>
+
+                        <p class="detalle-disponibilidad">  DISPONIBILIDAD
+                        <br>
+                        <a id="disponibilidad"></a>
+
+                        </p>
+
+
+                        <p class="detalle-precio">  PRECIO
+                        <br>
+                        <a id="precio"></a>
+
+                        </p>
+
+
+
+
+                    </tr>
+
+                   </table>
+
+
+                   <div class="botones"  >
+                           
+                                          <a  onclick="detalleModal();" class="boton" href="#agregar" >Agregar</a>
+			                              <a class="boton2" href="javascript:history.back();" target="_blank">Atras</a>
+
+                            
+
+                   </div>
+
+
+        </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+</body>
+
+        <script type="text/javascript">
+
+          var clave = localStorage.getItem("clave");
+          var tipo = localStorage.getItem("tipo");
+
+
+
+         console.log("Id del producto selecccionado " + clave);
+         console.log("TIPO " + tipo)
+
+             if ( tipo == 1) {
+
+
+             var leer = function() {
+
+
+                $.getJSON("../json/informatica.json", function (data) {
+               var img, marca, detalle, disponibilidad, precio;
+
+
+               img = data.arrayInformatica[clave].img;
+                 console.log(img);
+
+               marca = data.arrayInformatica[clave].marca;
+                 console.log(marca);
+
+               detalle= data.arrayInformatica[clave].detalle;
+                 console.log(detalle);
+              detalle2 = data.arrayInformatica[clave].detalle;
+                console.log(detalle2);
+
+               disponibilidad=data.arrayInformatica[clave].disponibilidad;
+                 console.log(disponibilidad);
+
+                disponibilidad2=data.arrayInformatica[clave].disponibilidad;
+
+
+               precio= data.arrayInformatica[clave].precio;
+                 console.log(precio);
+                precio2= data.arrayInformatica[clave].precio;
+
+
+
+              document.getElementById('imagen').src= "../img/info/"+img;
+              document.getElementById('marca').innerHTML = marca;
+              document.getElementById('detalle').innerHTML = detalle;
+              document.getElementById('disponibilidad').innerHTML = disponibilidad;
+              document.getElementById('precio').innerHTML = precio;
+
+              document.getElementById('detalle2').innerHTML = detalle;
+
+
+             });
+
+
+
+        }
+
+        }
+            if ( tipo == 2) {
+
+                console.log("Entro en tipo celular " + tipo)
+               var leer = function() {
+
+
+                $.getJSON("../json/celular.json", function (data) {
+               var img, marca, detalle, disponibilidad, precio;
+
+
+              img = data.arrayCelular[clave].img;
+                 console.log(img);
+
+               marca = data.arrayCelular[clave].marca;
+                 console.log(marca);
+
+               detalle= data.arrayCelular[clave].detalle;
+                 console.log(detalle);
+              detalle2 = data.arrayCelular[clave].detalle;
+                console.log(detalle2);
+
+               disponibilidad=data.arrayCelular[clave].disponibilidad;
+                 console.log(disponibilidad);
+
+                disponibilidad2=data.arrayCelular[clave].disponibilidad;
+
+
+               precio= data.arrayCelular[clave].precio;
+                 console.log(precio);
+
+               precio2 = data.arrayCelular[clave].precio;
+
+
+
+              document.getElementById('imagen').src= "../img/cel/"+img;
+              document.getElementById('marca').innerHTML = marca;
+              document.getElementById('detalle').innerHTML = detalle;
+              document.getElementById('disponibilidad').innerHTML = disponibilidad;
+              document.getElementById('precio').innerHTML = precio ;
+
+              document.getElementById('detalle2').innerHTML = detalle;
+
+
+
+             });
+
+        }
+    }
+           if ( tipo == 3) {
+
+               console.log("Entro en tipo electo " + tipo)
+
+                var leer = function() {
+
+
+                $.getJSON("../json/electro.json", function (data) {
+               var img, marca, detalle, disponibilidad, precio;
+
+
+               img = data.arrayElectro[clave].img;
+                 console.log(img);
+
+               marca = data.arrayElectro[clave].marca;
+                 console.log(marca);
+
+               detalle= data.arrayElectro[clave].detalle;
+                 console.log(detalle);
+                detalle2 = data.arrayElectro[clave].detalle;
+               disponibilidad=data.arrayElectro[clave].disponibilidad;
+                 console.log(disponibilidad);
+                disponibilidad2 = data.arrayElectro[clave].disponibilidad;
+               precio= data.arrayElectro[clave].precio;
+                 console.log(precio);
+               precio2= data.arrayElectro[clave].precio;
+
+
+              document.getElementById('imagen').src= "../img/electro/"+img;
+              document.getElementById('marca').innerHTML = marca;
+              document.getElementById('detalle').innerHTML = detalle;
+              document.getElementById('disponibilidad').innerHTML = disponibilidad;
+              document.getElementById('precio').innerHTML = precio;
+
+              document.getElementById('detalle2').innerHTML = detalle;
+
+
+
+             });
+
+            }
+        }
+
+
+
+
+        </script>
+
+
+<div id="agregar">
+    <div class="popup-contenedor">
+       <h2>Agregar Producto</h2>
+
+       <form >
+
+                 <table class="pedido" border= 1px >
+
+                     <tr class="pedido">
+                           <td width="10%">
+
+                            <a id="detalleModal1"></a>
+
+                           </td>
+                     </tr >
+                    <tr class="pedido">
+                               <td>
+
+                              <a id="detalleModal2"></a>
+
+                              </td>
+
+                     </tr>
+
+                 </table>
+                 <br>
+                 
+                 
+                <div>
+					 <h3>Cantidad de producto requerido</h3>
+
+					<input type="text" align="center" style="width:250px" id="cantidad" value="0" onChange="calculo(this.value, precio2);">
+
+					 <h3>Total</h3>
+
+					<input type="text" align="center" id="totalText" style="width:250px" readonly>
+				</div>
+       </form>
+                 <br>
+
+             <div >
+
+             <input onclick="agregarLista(), $('#agregar, .window').hide()" visibility= "hidden" class="submit1" type="submit" value="Confirmar"  >
+
+             </div>
+
+       <a class="popup-cerrar" href="#">X</a>
+    </div>
+    
+    </div>
+
+    <script>
+
+
+
+         function detalleModal(){
+
+                    document.getElementById('detalleModal1').innerHTML = detalle2;
+
+                    document.getElementById('detalleModal2').innerHTML = precio2;
+
+                    console.log("El precio para el calculo es= " + precio2);
+
+            }
+
+
+         var list=Array();
+
+
+        function agregarLista(){
+
+
+
+             var saldo=0;
+            var saldoActual=0;
+            var saldoCargar=0;
+
+
+             saldoActual  = sessionStorage.getItem("saldo");
+            saldoCargar = document.getElementById("totalText").value;
+
+            if(!saldoActual){
+
+                saldoActual=5000;
+              }
+
+                if (saldoActual>=1){
+
+                    saldoActual = (parseInt(saldoActual) - parseInt(saldoCargar));
+
+
+                    if(saldoActual>=1){
+
+                         console.log("El saldo actual es " + saldoActual);
+
+                    var saldo = sessionStorage.setItem("saldo", saldoActual);
+
+                          var  totalDisponible=0;
+                    var valorDescripcion = detalle2;
+                    var valorPrecioUnitario = precio2;
+                    var valorCantidad = document.getElementById("cantidad").value;
+                    var valorSubtotal = document.getElementById("totalText").value;
+
+
+            total();
+
+            function total () {
+                 async: true;
+
+                  var  totalActual = sessionStorage.getItem("total");
+
+                if(!totalActual){
+
+                    totalActual=0;
+                }
+
+                 console.log("El total actual es " + totalActual);
+
+                 var totalNuevo  = (parseInt(totalActual) + parseInt(valorSubtotal));
+
+                 console.log("El total es " + totalNuevo);
+
+                 var total = sessionStorage.setItem("total", totalNuevo);
+
+                 var lista = JSON.parse(sessionStorage.getItem("productos"));
+
+                if(lista==null) lista = [];
+
+                var producto = {"descripcion" : detalle2,
+                           "precio" : precio2,
+                            "cantidad" : document.getElementById("cantidad").value,
+                            "subtotal" : document.getElementById("totalText").value,
+                           };
+
+                lista.push(producto);
+                sessionStorage.setItem("productos", JSON.stringify(lista));
+                console.log(lista)
+
+				mensaje();
+
+				function mensaje(){
+
+				window.alert("Se agregó el producto al carrito!");
+
+					}
+
+                    }
+
+                 }
+                    else{
+
+                        alert("No se puede agregar el producto, consultar la disponibilidad de saldo en la cuenta!");
+                    }
+
+                }
+        }
+
+                </script>
+
+    <script>
+
+      function calculo(cantidad,precio2){
+
+            console.log(precio2);
+
+            console.log(cantidad);
+
+
+	       total = precio2*cantidad;
+
+            totalText.value = total;
+
+
+}
+
+
+</script>
+
+</html>

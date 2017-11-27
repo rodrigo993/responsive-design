@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Principal</title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../js/index.js"></script>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script language="javascript" src="../js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body onload="cargar();">
+
+<header>
+
+
+    <div class="encabezado">
+        <div class= "titulo">
+            CUENTA
+        </div>
+
+       <div class="logo">
+            <a title="" href="../index.html"><img class="imgCabecera" src="../img/logo.png" alt="" /></a>
+       </div>
+
+       <div class= "cuenta">
+            <a href="cuenta.html" ><img class="imgCuenta" src="../img/user5.png" alt="" /></a>
+       </div>
+
+        <div class="espaciado">
+          <H3>Tu mejor opción para compras online - No hacemos entrega</H3>
+        </div>
+
+
+      </div>
+</header>
+
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-sm-3 col-12 borde">
+              <div id="menu">
+                <ul>
+                         <li class="nivel1"><a href="producto.html" >Productos</a></li>
+
+
+
+                         <li class="nivel1"><a href="informatica.html" >Informatica</a></li>
+
+
+
+                         <li class="nivel1"><a href="electro.html" >Electrodomesticos</a></li>
+
+
+
+                         <li  class="nivel1"><a href="celular.html" >Celulares</a></li>
+
+
+                </ul>
+              </div>
+
+          </div>
+
+
+
+        <div class="col-lg-10 col-sm-9 col-12 borde">
+
+          <div class="producto">
+            <br>
+            <table class="tabla-cuenta" border= 1px  id ="tabla"></table>
+
+			<br>
+          <br>
+           <br>
+           
+            <table class="tabla-contenido" border= 2px solid valign= "top" >
+          <tr>
+                    <td width="800px">
+
+                             <div id="totalTexto">Total a Pagar:</div>
+
+                    </td>
+
+                    <td>
+
+                              <div id="total" > </div>
+
+                    </td>
+
+
+          </tr >
+
+
+          <tr>
+                    <td width="800px">
+
+                             <div id="saldoTexto">Saldo Disponible:</div>
+
+                    </td>
+
+                    <td>
+
+                              <div id="saldo"> </div>
+
+                    </td>
+
+          </tr >
+
+                <tr>
+                      <td width="800px">
+
+                             <div id="saldoTotalTexto">Saldo Total Carrito:</div>
+
+                           </td>
+
+                           <td>
+
+                              <div id="saldoTotal"> 5000 </div>
+
+                            </td>
+
+
+               </tr >
+        </table>
+
+
+	<br>
+   <br>
+    <div class="botones">
+
+         <a  onclick="" class="boton" href="#confirmar" >Confirmar</a>
+        
+    </div>
+
+
+            </div>
+        </div>
+      </div>
+</div>    
+    
+    <script>
+
+
+        var d = '<tr>'+
+
+            '<th>Descripción del Producto</th>'+
+            '<th>Precio (en dolares)</th>'+
+            '<th>Cantidad</th>'+
+            '<th>Subtotal (en dolares)</th>'+
+
+            '</tr>';
+
+
+     function cargar (){
+
+          var datos = JSON.parse(sessionStorage.getItem("productos"))
+
+
+
+          if(!datos){
+
+            console.log("Entro en undefined")
+
+			document.getElementById('tabla').innerHTML = "No se encontraron datos para mostrar en la tabla!";
+
+			 document.getElementById('total').innerHTML = "Sin datos";
+			 document.getElementById('saldo').innerHTML = "Sin datos";
+
+          }else {
+
+           
+
+         for (var i = 0; i < datos.length; i++) {
+
+
+         d+= '<tr>'+
+
+         '<td>'+datos[i].descripcion+'</td>'+
+         '<td>'+datos[i].precio+'</td>'+
+         '<td>'+datos[i].cantidad+'</td>'+
+        '<td>'+datos[i].subtotal+'</td>'+
+		
+         '</tr>';
+
+            var  totalActual = sessionStorage.getItem("total");
+             var saldo = sessionStorage.getItem("saldo");
+
+            document.getElementById('total').innerHTML = totalActual;
+            document.getElementById('saldo').innerHTML = saldo;
+
+
+         }
+
+         $("#tabla").append(d);
+          }
+
+
+
+}
+
+	function borrarFila(posicion){
+
+		var datos= Array();
+		datos = JSON.parse(sessionStorage.getItem("productos"));
+
+		console.log(datos);
+
+		console.log(indice);
+
+		for (i=0;i<datos.length;i++){
+
+
+			console.log("El indice a eliminar es " + i + " del array: " + {datos : 0 });
+
+
+
+		}
+
+
+
+	}
+		
+		function confirmar(){
+			
+			
+			var datos= Array();
+			datos = JSON.parse(sessionStorage.getItem("productos"));
+			
+			
+			if(datos==null){
+				
+				window.alert("No se ingresaron datos validos");
+				window.alert("Por favor, ingrese por lo menos un producto para realizar el pedido");
+			}
+			else{
+				
+				localStorage.setItem("clave", 0);
+				localStorage.setItem("item", 0);
+			
+			
+				sessionStorage.removeItem("productos");
+				sessionStorage.removeItem("saldo");
+				sessionStorage.removeItem("total");
+
+				window.alert("Finalizó el test, gracias por su colaboración con el proyecto");
+
+				 window.location="/index.html";
+				
+				
+			}
+			
+		}
+
+
+    </script>
+
+
+
+</body>
+ <footer class="footer">
+       Marcos Acosta
+
+       <br>
+       Rodrigo González
+       <br>
+
+       Universidad Nacional de Canindeyú
+       <br>
+</footer>
+
+<div id="confirmar">
+    <div class="popup-contenedor">
+       <h2>Confirmar Pedido</h2>
+<br>
+      <br>
+       <form>
+
+                <div class="enter">
+					
+            	<a  onclick="confirmar(); $('#confirmar, .window').hide()" visibility= "hidden" class="botonConfirmar" href="#confirmar" >Confirmar</a>
+            	<a  onclick="" class="boton2" href="" >Cancelar</a>
+			
+          		
+
+				 </div>
+       </form>
+             
+       <a class="popup-cerrar" href="#">X</a>
+  
+ 	</div>
+    </div>
+
+</html>
