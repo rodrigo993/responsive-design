@@ -32,7 +32,7 @@
        </div>
 
 
-        <div class="blank">
+        <div class="espaciado">
 
         <a id="detalle2"></a>
 
@@ -47,24 +47,25 @@
         <div class="row">
             <div class="col-lg-2 col-sm-3 col-12 borde">
                 <div id="menu">
-                  <ul>
-                   <li class="nivel1"><a href="producto.html" >Productos</a></li>
+                    <ul>
+                                     <li class="nivel1"><a href="producto.html" >Productos</a></li>
 
 
 
-                   <li class="nivel1"><a href="informatica.html" >Informatica</a></li>
+                                     <li class="nivel1"><a href="informatica.html" >Informática</a></li>
 
 
 
-                   <li class="nivel1"><a href="electro.html" >Electrodomesticos</a></li>
+                                     <li class="nivel1"><a href="electro.html" >Electrodomésticos</a></li>
 
 
 
-                   <li  class="nivel1"><a href="celular.html" >Celulares</a></li>
+                                     <li  class="nivel1"><a href="celular.html" >Celulares</a></li>
 
-              
 
-                </ul>
+
+
+                            </ul>
             </div>
 
       </div>
@@ -116,15 +117,17 @@
 
                    </table>
 
-
+                    <br>
                    <div class="botones"  >
+                          
                            
                                           <a  onclick="detalleModal();" class="boton" href="#agregar" >Agregar</a>
 			                              <a class="boton2" href="javascript:history.back();" target="_blank">Atras</a>
 
                             
-
+                    
                    </div>
+                   
 
 
         </div>
@@ -296,41 +299,19 @@
 
 
 <div id="agregar">
-    <div class="popup-contenedor">
+    <div class="popup-contenedor2">
        <h2>Agregar Producto</h2>
 
-       <form >
-
-                 <table class="pedido" border= 1px >
-
-                     <tr class="pedido">
-                           <td width="10%">
-
-                            <a id="detalleModal1"></a>
-
-                           </td>
-                     </tr >
-                    <tr class="pedido">
-                               <td>
-
-                              <a id="detalleModal2"></a>
-
-                              </td>
-
-                     </tr>
-
-                 </table>
-                 <br>
-                 
+       <form >    
                  
                 <div>
-					 <h3>Cantidad de producto requerido</h3>
+					 <h3>Ingrese cantidad</h3>
 
-					<input type="text" align="center" style="width:250px" id="cantidad" value="0" onChange="calculo(this.value, precio2);">
+					<input type="text" align="center"  id="cantidad" value="0" onChange="calculo(this.value, precio2);">
 
 					 <h3>Total</h3>
 
-					<input type="text" align="center" id="totalText" style="width:250px" readonly>
+					<input type="text" align="center" id="totalText" readonly>
 				</div>
        </form>
                  <br>
@@ -338,8 +319,9 @@
              <div >
 
              <input onclick="agregarLista(), $('#agregar, .window').hide()" visibility= "hidden" class="submit1" type="submit" value="Confirmar"  >
-
+            
              </div>
+             <br>
 
        <a class="popup-cerrar" href="#">X</a>
     </div>
