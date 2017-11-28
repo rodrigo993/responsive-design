@@ -2,7 +2,9 @@ body{
   margin: 0px;
 }
 .borde{
-   border: 1px #000 solid;
+     border: 1px #000 solid;
+    padding-right: 0px; 
+    padding-left: 0px;
 }
 
 .header{
@@ -60,17 +62,6 @@ body{
 
 }
 
-.blank{
-	padding-top: 40px;
-	height: 80px;
-
-    text-align: center;
-    background-color: dimgray;
-    color: white;
-    font-weight: bold;
-
-
-}
 
 .footer{
 
@@ -139,7 +130,7 @@ body{
 
 .producto{
 
-    width: 80%;
+    width: 1%;
     height: 800px;
 
     display: table-cell;
@@ -149,6 +140,7 @@ body{
 }
 
 .img-contenido{
+    
     width: 150px;
 	height: 150px;
 }
@@ -254,16 +246,29 @@ body{
 
    position: relative;
    margin:7% auto;
-   padding:30px 50px;
    background-color: #fafafa;
    color:#333;
    width:50%;
-}
-.popup-contenedor h2 {
+   max-width: 555px;
     text-align: center;
-    font-size: 44px;
+    font-size: 45px;
 
 }
+
+.popup-contenedor2 {
+
+   position: relative;
+   margin:7% auto;
+   background-color: #fafafa;
+   color:#333;
+   width:50%;
+   max-width: 555px;
+    text-align: center;
+    font-size: 35px;
+    
+    min-width: 525px;
+}
+
 a.popup-cerrar {
    position: absolute;
    top:3px;
@@ -348,15 +353,15 @@ display: inline-block;
 font-family: monospace;
 font-size: 18px;
 line-height: 1;
-padding: 15px 25px;
+padding: 20px 35px;
 text-decoration: none;
 text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
-margin-right: 70px;
+
 }
 
 .boton2{
 
-margin-left: 70px;
+margin-left: 10%;
 background-color: red;
 border-radius: 8px;
 color: #fff;
@@ -364,11 +369,29 @@ display: inline-block;
 font-family: monospace;
 font-size: 18px;
 line-height: 1;
-padding: 15px 25px;
+padding: 20px 35px;
 
 text-decoration: none;
 text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
 }
+
+
+
+.boton5{
+
+background-color: red;
+border-radius: 8px;
+color: #fff;
+display: inline-block;
+font-family: monospace;
+font-size: 18px;
+line-height: 1;
+padding: 20px 40px;
+
+text-decoration: none;
+text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
+}
+
 
 
 .botonConfirmar{
@@ -380,10 +403,11 @@ display: inline-block;
 font-family: monospace;
 font-size: 18px;
 line-height: 1;
-padding: 15px 25px;
+padding: 20px 35px;
 text-decoration: none;
 text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
-margin-right: 70px;
+
+
 }
 
 #detalleModal1{
@@ -539,7 +563,26 @@ font-size: 16px;
     height: 160px;
 
 }
+.popup-contenedor {
+    position: relative;
+    margin: 7% auto;
+    background-color: #fafafa;
+    color: #333;
+    width: 50%;
+    min-width: 260px;
+    
+}
  
+.popup-contenedor h2, h3 {
+    font-size: 16px;
+   
+}
+    
+.borde{
+    padding-right: 0px;
+    padding-left: 0px;
+    
+}
     
 }
 
@@ -557,7 +600,7 @@ font-size: 16px;
 
   height: 60px;
   padding-top: 8px;
-  font-size: 20px;
+ 
 
 
 }
@@ -574,6 +617,19 @@ font-size: 16px;
 
 }
     
+
+.popup-contenedor{
+        
+    padding: 0px;
+    font-size: 25px;
+      
+    }
+    
+.popup-contenedor2 {
+    width: 100%; 
+    min-width: auto; 
+}
+    
     
     
     
@@ -581,10 +637,9 @@ font-size: 16px;
     
     
 .tabla-cuenta{
-
    border: 2px solid black;
    border-spacing: 0;
-    margin-left: 0;S
+    margin-left: 0;
     width: 100%;
     font-size: 16px;
    text-align: center;
@@ -690,8 +745,33 @@ font-size: 16px;
     font-size: 14px;
     }
     
+.boton2{
+
+margin-left: 0px;
+    
     
 }
+    
+    
+.popup-contenedor2 {
+  
+   font-size: 20px;
+   
+   
+}
+.popup-contenedor2 h2{
+  
+   font-size: 20px;
+   
+   
+}
+.popup-contenedor2 h3 {
+  
+   font-size: 20px;
+   
+   
+}
+   
     
 @media screen and (max-width: 360px) { 
     
