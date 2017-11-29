@@ -19,7 +19,7 @@ body{
        text-align: center;
        font-style: italic;
        font-size: 50px;
-    background-color: orange;
+       background-color: orange;
 
 }
 
@@ -155,8 +155,11 @@ body{
 	margin-bottom: 20px;
 	border: 2px solid black;
 	border-spacing: 0;
+    background-color: white;
+
 
 }
+
 
 .link{
 
@@ -536,7 +539,7 @@ text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
   display: block;
   width: 100%;
   text-align: center;
-
+  
 }
     
 .menu  a{
