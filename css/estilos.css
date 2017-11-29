@@ -1,16 +1,14 @@
 body{
   margin: 0px;
+  background-color: azure  ;
 }
-.borde{
-     border: 1px #000 solid;
-    padding-right: 0px; 
-    padding-left: 0px;
-}
+
 
 .header{
   display: flex;
   flex-flow: column;
 }
+
 
 .titulo{
        padding-top: 20px;
@@ -21,7 +19,7 @@ body{
        text-align: center;
        font-style: italic;
        font-size: 50px;
-       background-color: orange;
+    background-color: orange;
 
 }
 
@@ -52,7 +50,7 @@ body{
    padding-top: 40px;
    text-align: center;
    text-decoration: inherit;
-   background-color: dimgray;
+   background-color: dimgrey;
    color: white;
    font-weight: bold;
    height: 80px;
@@ -80,22 +78,21 @@ body{
 .contenido{
     width: 100%;
     display: table;
+   
 }
 
-.menu-contenedor{
-  width: 20%;
-  height: 800px;
-  font-size: 0.9em;
-	display: table-cell;
-	position: absolute;
-	background-color: #366;;
+.menu-contenido{
+  
+  background-color: #366;
 
 
 }
+
 
 #menu{
 
     padding-top: -30px;
+     
 }
 
 #menu ul {
@@ -134,6 +131,7 @@ body{
     height: 800px;
 
     display: table-cell;
+     
 
 
 
@@ -243,10 +241,10 @@ body{
 }
 
 .popup-contenedor {
-
+    
    position: relative;
    margin:7% auto;
-   background-color: #fafafa;
+   background-color: azure ;
    color:#333;
    width:50%;
    max-width: 555px;
@@ -259,7 +257,8 @@ body{
 
    position: relative;
    margin:7% auto;
-   background-color: #fafafa;
+   padding-top: 20px;
+   background-color: skyblue;
    color:#333;
    width:50%;
    max-width: 555px;
@@ -267,6 +266,7 @@ body{
     font-size: 35px;
     
     min-width: 525px;
+   
 }
 
 a.popup-cerrar {
@@ -305,7 +305,8 @@ a.popup-cerrar {
     font-weight: bold;
     padding: 1em;
     text-align: center;
-    border-bottom-style: double;
+    background-color: #33E0FF  ;
+    
 
 
 }
@@ -315,7 +316,7 @@ a.popup-cerrar {
     font-weight: bold;
     padding: 1em;
     text-align: center;
-    border-bottom-style: double;
+  
 
 
 
@@ -326,8 +327,9 @@ a.popup-cerrar {
     font-weight: bold;
     padding: 1em;
     text-align: center;
+    background-color: #33E0FF ;
 
-    border-bottom-style: double;
+ 
 }
 .detalle-precio{
     font-family: monospace;
@@ -406,6 +408,7 @@ line-height: 1;
 padding: 20px 35px;
 text-decoration: none;
 text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
+
 
 
 }
@@ -545,6 +548,7 @@ text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
 .producto {
     display: table;
     width: 100%;
+   
   
 
 }
@@ -554,8 +558,6 @@ margin: 0;
 width: 100%;
 font-size: 16px;
 	
-
-
 }
 
 .img-contenido{
@@ -566,7 +568,6 @@ font-size: 16px;
 .popup-contenedor {
     position: relative;
     margin: 7% auto;
-    background-color: #fafafa;
     color: #333;
     width: 50%;
     min-width: 260px;
@@ -578,11 +579,7 @@ font-size: 16px;
    
 }
     
-.borde{
-    padding-right: 0px;
-    padding-left: 0px;
-    
-}
+
     
 }
 
@@ -607,14 +604,23 @@ font-size: 16px;
     
 .imgCabecera{
   width: 70px;
-  margin-top: -78px;
+  margin-top: -75px;
 
 }
 .imgCuenta{
-  width: 72px;
-  margin-top: -73px;
+  height: 70px;
+  width: 74px;
+  margin-top: -75px;
   margin-left: 80%;
 
+}
+    
+.tabla-contenido{
+margin: auto;
+width: 98%;
+font-size: 14px;
+
+	
 }
     
 
@@ -626,16 +632,13 @@ font-size: 16px;
     }
     
 .popup-contenedor2 {
-    width: 100%; 
+    padding-top: 20px;
+    width: 90%; 
     min-width: auto; 
+    
 }
     
-    
-    
-    
-    
-    
-    
+
 .tabla-cuenta{
    border: 2px solid black;
    border-spacing: 0;
@@ -644,6 +647,7 @@ font-size: 16px;
     font-size: 16px;
    text-align: center;
 }
+
 
 
 .total_disponible{
@@ -688,16 +692,34 @@ font-size: 16px;
     color: green;
 	border-right: 0px;
 }
-
     
-    
-    
-    
-    
-    
-    
-
+.footer{
+        margin-top: 30px;
+        margin-bottom: 10px;
 }
+
+    
+    
+.borde{
+   
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 10px;
+    }
+
+.img-contenido-detalle {
+    height: 200px;
+}
+
+.botonConfirmar{
+    margin-bottom: 10px; 
+    
+}
+    
+
+    }
+    
+    
     
 @media screen and (max-width: 485px) { 
     
@@ -714,7 +736,7 @@ font-size: 16px;
 
 
 }
-    
+
 
     
         
@@ -736,9 +758,7 @@ font-size: 16px;
 
 
 }
-.img-contenido-detalle {
-    height: 200px;
-}
+
     
 .tabla-contenido p{
         
@@ -753,21 +773,16 @@ margin-left: 0px;
 }
     
     
-.popup-contenedor2 {
-  
-   font-size: 20px;
-   
-   
-}
+
 .popup-contenedor2 h2{
   
    font-size: 20px;
    
    
 }
-.popup-contenedor2 h3 {
+.popup-contenedor2 {
   
-   font-size: 20px;
+   font-size: 18px;
    
    
 }
